@@ -938,7 +938,8 @@
             transition: transform 0.5s ease;
         }
 
-        .project-card:hover .project-img img {
+        .project-card:hover .project-img img,
+        .project-card:hover .project-img video {
             transform: scale(1.1);
         }
 
@@ -1158,6 +1159,30 @@
             object-fit: cover;
             border-radius: 14px;
             border: 1px solid rgba(230, 57, 70, 0.18);
+        }
+
+        .project-modal-media {
+            width: 100%;
+            min-height: 280px;
+        }
+
+        .project-modal-media video {
+            display: none;
+        }
+
+        .project-modal-media.is-video img {
+            display: none;
+        }
+
+        .project-modal-media.is-video video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 1px solid rgba(230, 57, 70, 0.18);
+            background: #050505;
         }
 
         .project-modal-description {
@@ -2001,6 +2026,35 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img">
+                        <span class="project-badge">LATEST</span>
+                        <video autoplay muted loop playsinline class="project-video">
+                            <source src="assets\project-assets\Create_an_exactly_second_pr.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-overlay"><button type="button" class="btn project-detail-btn"
+                                data-project="tandem">View Details</button></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TANDEM PRODUCTIVITY & COLLABORATION APP</h3>
+                        <p>A productivity and collaboration app connecting tasks, goals, people, and progress in one place.</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item"><strong>Problem</strong><span>Scattered productivity workflows</span></div>
+                            <div class="project-meta-item"><strong>Solution</strong><span>Connected productivity system</span></div>
+                            <div class="project-meta-item"><strong>Outcome</strong><span>Tasks, goals & collaboration together</span></div>
+                        </div>
+                        <div class="project-tags"><span class="project-tag">React Native</span><span
+                                class="project-tag">Expo</span><span class="project-tag">TypeScript</span><span
+                                class="project-tag">Node.js</span><span class="project-tag">MongoDB</span><span
+                                class="project-tag">Socket.IO</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank"
+                                rel="noopener">GitHub</a>
+                            <a href="https://drive.google.com/drive/folders/14qmU4IUlJlNp-5U8uAD2qphIx71UauCe?usp=sharing"
+                                class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
                         <span class="project-badge">Latest</span>
                         <video autoplay muted loop playsinline class="project-video">
                             <source src="assets\project-assets\Create_a_premium_startup_launc.mp4" type="video/mp4">
@@ -2119,7 +2173,13 @@
                     aria-label="Close project details">&times;</button>
             </div>
             <div class="project-modal-grid">
-                <img id="projectModalImage" class="project-modal-image" src="" alt="Project preview">
+                <div id="projectModalMedia" class="project-modal-media" aria-label="Project preview">
+                    <img id="projectModalImage" class="project-modal-image" src="" alt="Project preview">
+                    <video id="projectModalVideo" class="project-modal-image" controls playsinline preload="metadata"
+                        aria-label="Project demo video">
+                        <source id="projectModalVideoSource" src="" type="video/mp4">
+                    </video>
+                </div>
                 <div>
                     <p id="projectModalDescription" class="project-modal-description"></p>
                     <ul id="projectModalPoints" class="project-modal-list"></ul>
@@ -2255,6 +2315,37 @@
         });
 
         const projectData = {
+            tandem: {
+                title: 'TANDEM',
+                subtitle: 'Get Things Done. Together.',
+                description: 'Tandem is a productivity and collaboration mobile app that brings tasks, goals, people, reminders, and progress together in one connected workspace. Users can create and organize tasks, assign responsibilities, collaborate through groups, connect tasks to goals, receive reminders, track progress, participate in productivity challenges, and share achievements with the community.',
+                points: [
+                    'Task management with priorities, statuses, due dates, reminders, checklists, comments, and task updates.',
+                    'Task assignment, shared responsibilities, private groups, member roles, permissions, and realtime collaboration.',
+                    'Goals connected to tasks with progress tracking, productivity challenges, achievements, community interactions, and leaderboards.',
+                    'REST APIs with server-side authorization, MongoDB persistence, JWT authentication, and Socket.IO realtime communication.'
+                ],
+                tags: [
+                    'React Native',
+                    'Expo',
+                    'Expo Router',
+                    'TypeScript',
+                    'Zustand',
+                    'TanStack Query',
+                    'React Hook Form',
+                    'Zod',
+                    'Node.js',
+                    'Express',
+                    'MongoDB',
+                    'Mongoose',
+                    'JWT',
+                    'Socket.IO',
+                    'Firebase Analytics'
+                ],
+                image: 'assets/project-assets/Create_an_exactly_second_pr.mp4',
+                mediaType: 'video',
+                liveLink: 'https://github.com/ateequrrahmaan'
+            },
             ecommerce: {
                 title: 'NEARBY LOCAL DISCOVERY PLATFORM',
                 subtitle: 'A full-stack mobile platform connecting users with nearby businesses through location-based discovery, promotions, reels, and maps.',
@@ -2300,6 +2391,9 @@
         const projectModalTitle = document.getElementById('projectModalTitle');
         const projectModalSubtitle = document.getElementById('projectModalSubtitle');
         const projectModalImage = document.getElementById('projectModalImage');
+        const projectModalMedia = document.getElementById('projectModalMedia');
+        const projectModalVideo = document.getElementById('projectModalVideo');
+        const projectModalVideoSource = document.getElementById('projectModalVideoSource');
         const projectModalDescription = document.getElementById('projectModalDescription');
         const projectModalPoints = document.getElementById('projectModalPoints');
         const projectModalTags = document.getElementById('projectModalTags');
@@ -2316,8 +2410,22 @@
 
             projectModalTitle.textContent = project.title;
             projectModalSubtitle.textContent = project.subtitle;
-            projectModalImage.src = project.image;
-            projectModalImage.alt = project.title;
+
+            projectModalMedia.classList.toggle('is-video', project.mediaType === 'video');
+
+            if (project.mediaType === 'video') {
+                projectModalVideoSource.src = project.image;
+                projectModalVideo.load();
+                projectModalVideo.currentTime = 0;
+                projectModalImage.removeAttribute('src');
+            } else {
+                projectModalVideo.pause();
+                projectModalVideoSource.removeAttribute('src');
+                projectModalVideo.load();
+                projectModalImage.src = project.image;
+                projectModalImage.alt = project.title;
+            }
+
             projectModalDescription.textContent = project.description;
             projectModalPoints.innerHTML = project.points.map(point => `<li>${point}</li>`).join('');
             projectModalTags.innerHTML = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
@@ -2329,6 +2437,7 @@
         };
 
         const closeProjectModal = () => {
+            projectModalVideo.pause();
             projectModal.classList.remove('active');
             projectModal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
