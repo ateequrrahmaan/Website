@@ -13,10 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta name="description"
+<meta name="description"
         content="Ateequr Rahmaan is a Full Stack & AI Engineer building SaaS platforms, mobile applications, and AI-powered digital products with React, React Native, Node.js, MongoDB, TypeScript, RAG, and MCP.">
     <meta name="keywords"
         content="Ateequr Rahmaan, Full Stack Developer, Full Stack Engineer, AI Engineer, React Developer, React Native Developer, Node.js Developer, MERN Stack Developer, SaaS Developer, Software Engineer, Product Engineer, Chennai Developer, AI Developer India">
@@ -75,7 +72,7 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -2203,6 +2200,30 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
 }
 
 </style>
+
+<style id="performance-optimizations">
+/* Performance layer: preserve the visual design while reducing main-thread/GPU work. */
+.project-video { will-change: auto; transform: translateZ(0); }
+.project-card-v3, .skill-card-v3 { will-change: auto; }
+.hero-noise { animation: none !important; }
+@media (hover: none), (pointer: coarse) {
+  body { cursor: auto !important; }
+  .custom-cursor { display: none !important; }
+}
+@media (max-width: 768px) {
+  .project-card-v3 { transform: none !important; }
+  .hero-console-v3 { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -2263,13 +2284,6 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
   </div>
 </section>
 
-    <div class="signal-marquee" aria-hidden="true">
-        <div class="signal-track">
-            <span>BUILD</span><b>✦</b><span>SHIP</span><b>✦</b><span>ITERATE</span><b>✦</b><span>SCALE</span><b>✦</b><span>AI</span><b>✦</b><span>SAAS</span><b>✦</b>
-            <span>BUILD</span><b>✦</b><span>SHIP</span><b>✦</b><span>ITERATE</span><b>✦</b><span>SCALE</span><b>✦</b><span>AI</span><b>✦</b><span>SAAS</span><b>✦</b>
-        </div>
-    </div>
-
     <section id="about" class="about-v3">
   <div class="container">
     <div class="section-intro-v3"><span>02 / THE PERSON</span><h2>More than a<br><em>stack.</em></h2><p>I care about the gap between a technically correct product and a product people actually enjoy using.</p></div>
@@ -2284,6 +2298,13 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
     </div>
   </div>
 </section>
+
+    <div class="signal-marquee" aria-hidden="true">
+        <div class="signal-track">
+            <span>BUILD</span><b>✦</b><span>SHIP</span><b>✦</b><span>ITERATE</span><b>✦</b><span>SCALE</span><b>✦</b><span>AI</span><b>✦</b><span>SAAS</span><b>✦</b>
+            <span>BUILD</span><b>✦</b><span>SHIP</span><b>✦</b><span>ITERATE</span><b>✦</b><span>SCALE</span><b>✦</b><span>AI</span><b>✦</b><span>SAAS</span><b>✦</b>
+        </div>
+    </div>
 
     <section id="process" class="process-section">
         <div class="container">
@@ -2367,19 +2388,19 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
     <div class="projects-head-v3"><div><span>05 / SELECTED WORK</span><h2>Things I<br><em>actually built.</em></h2></div><p>Not concept shots. Real product work across SaaS, supply chain, local discovery and collaboration.</p></div>
     <div class="project-showcase-v3">
       <article class="project-card project-card-v3 project-tandem" data-project-index="01">
-        <div class="project-img"><span class="project-badge">01 / FEATURED</span><video autoplay muted loop playsinline class="project-video"><source src="assets/project-assets/Create_an_exactly_second_pr.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="tandem">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">01</span></div>
+        <div class="project-img"><span class="project-badge">01 / FEATURED</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/tandem-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Create_an_exactly_second_pr.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="tandem">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">01</span></div>
         <div class="project-info"><div class="project-label">PRODUCTIVITY / MOBILE / REALTIME</div><h3>TANDEM</h3><p>Get Things Done. Together. A productivity and collaboration app connecting tasks, goals, people, reminders and progress.</p><div class="project-meta"><div class="project-meta-item"><strong>CORE</strong><span>Tasks + Goals</span></div><div class="project-meta-item"><strong>REALTIME</strong><span>Socket.IO</span></div><div class="project-meta-item"><strong>PLATFORM</strong><span>React Native</span></div></div><div class="project-tags"><span class="project-tag">React Native</span><span class="project-tag">Expo</span><span class="project-tag">TypeScript</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/drive/folders/14qmU4IUlJlNp-5U8uAD2qphIx71UauCe?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
       </article>
       <article class="project-card project-card-v3" data-project-index="02">
-        <div class="project-img"><span class="project-badge">02 / SAAS</span><video autoplay muted loop playsinline class="project-video"><source src="assets/project-assets/Create_a_premium_second_cin.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="management">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">02</span></div>
+        <div class="project-img"><span class="project-badge">02 / SAAS</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/proman-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Create_a_premium_second_cin.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="management">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">02</span></div>
         <div class="project-info"><div class="project-label">PROJECT MANAGEMENT / MULTI-TENANT</div><h3>PROMAN</h3><p>A multi-tenant SaaS workspace for teams, projects and tasks with secure collaboration and AI-assisted productivity.</p><div class="project-meta"><div class="project-meta-item"><strong>MODEL</strong><span>Multi-tenant</span></div><div class="project-meta-item"><strong>STACK</strong><span>Next.js</span></div><div class="project-meta-item"><strong>FOCUS</strong><span>Teams</span></div></div><div class="project-tags"><span class="project-tag">Next.js</span><span class="project-tag">TypeScript</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://promann.netlify.app" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
       </article>
       <article class="project-card project-card-v3" data-project-index="03">
-        <div class="project-img"><span class="project-badge">03 / B2B</span><video autoplay muted loop playsinline class="project-video"><source src="assets/project-assets/Tracksup_Landing_Page_Hero_Vid.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="leads">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">03</span></div>
+        <div class="project-img"><span class="project-badge">03 / B2B</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/tracksup-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Tracksup_Landing_Page_Hero_Vid.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="leads">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">03</span></div>
         <div class="project-info"><div class="project-label">SUPPLY CHAIN / OPERATIONS</div><h3>TRACKSUP</h3><p>A production-ready B2B platform for inventory, procurement, delivery tracking, retailers and operational workflows.</p><div class="project-meta"><div class="project-meta-item"><strong>DOMAIN</strong><span>Supply chain</span></div><div class="project-meta-item"><strong>ACCESS</strong><span>RBAC</span></div><div class="project-meta-item"><strong>DATA</strong><span>MongoDB</span></div></div><div class="project-tags"><span class="project-tag">Next.js</span><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">MongoDB</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://tracksup.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
       </article>
       <article class="project-card project-card-v3 project-nearby" data-project-index="04">
-        <div class="project-img"><span class="project-badge">04 / MOBILE</span><video autoplay muted loop playsinline class="project-video"><source src="assets/project-assets/Create_a_premium_startup_launc.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="ecommerce">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">04</span></div>
+        <div class="project-img"><span class="project-badge">04 / MOBILE</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/nearby-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Create_a_premium_startup_launc.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="ecommerce">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">04</span></div>
         <div class="project-info"><div class="project-label">LOCAL DISCOVERY / MAPS</div><h3>NEARBY</h3><p>A location-based platform for discovering nearby shops, products, offers and short-form reels.</p><div class="project-meta"><div class="project-meta-item"><strong>MAPS</strong><span>Google Maps</span></div><div class="project-meta-item"><strong>MEDIA</strong><span>Cloudinary</span></div><div class="project-meta-item"><strong>APP</strong><span>Flutter</span></div></div><div class="project-tags"><span class="project-tag">Flutter</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span><span class="project-tag">Cloudinary</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/drive/folders/1tNDciO1-hntypCOLoIkuSARRnY4yHszf" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
       </article>
     </div>
@@ -2643,7 +2664,7 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
         });
 
         const particlesContainer = document.getElementById('particles');
-        const particleCount = 30;
+        const particleCount = 8;
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
@@ -2658,35 +2679,32 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
             particlesContainer.appendChild(particle);
         }
 
-        const revealElements = () => {
-            const elements = document.querySelectorAll('.section-title, .about-text, .skill-category, .experience-card, .project-card, .projects-cta, .contact-info, .contact-card, .footer-content');
-            elements.forEach((element) => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
+        const revealTargets = document.querySelectorAll(
+    '.section-title, .about-text, .skill-category, .experience-card, .project-card, .projects-cta, .contact-info, .contact-card, .footer-content'
+);
 
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = 1;
-                }
-            });
-        };
+revealTargets.forEach((el) => {
+    el.style.opacity = '0';
+    el.style.transition = 'opacity 0.6s ease';
+});
 
-        document.querySelectorAll('.section-title, .about-text, .skill-category, .experience-card, .project-card, .projects-cta, .contact-info, .contact-card, .footer-content').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transition = 'opacity 0.6s ease';
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                observer.unobserve(entry.target);
+            }
         });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
 
-        document.querySelectorAll('#skills .skill-category').forEach((card, index) => {
-            card.style.transitionDelay = `${index * 70}ms`;
-        });
-
-        window.addEventListener('scroll', revealElements);
-        window.addEventListener('load', revealElements);
+    revealTargets.forEach((el) => revealObserver.observe(el));
+} else {
+    revealTargets.forEach((el) => { el.style.opacity = '1'; });
+}
 
         const customCursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            customCursor.style.left = `${e.clientX}px`;
-            customCursor.style.top = `${e.clientY}px`;
-        });
+        
 
         document.querySelectorAll('a, .btn, button').forEach(el => {
             el.addEventListener('mouseenter', () => customCursor.classList.add('hover'));
@@ -2778,8 +2796,29 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
   document.addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey)return; const map={'1':'home','2':'projects','3':'skills','4':'ai-lab','5':'contact'}; if(map[e.key]&&!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)){document.getElementById(map[e.key])?.scrollIntoView({behavior:reduceMotion?'auto':'smooth'});}});
 
   // Project videos: play only when visible to save resources.
-  const vids=[...document.querySelectorAll('.project-video')];
-  if('IntersectionObserver' in window){ const vo=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>{if(isIntersecting)target.play().catch(()=>{});else target.pause();}),{threshold:.15}); vids.forEach(v=>vo.observe(v)); }
+  const vids = [...document.querySelectorAll('.project-video')];
+
+if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+            if (isIntersecting) {
+                if (!target.dataset.loaded) {
+                    const source = target.querySelector('source[data-src]');
+                    if (source) {
+                        source.src = source.dataset.src;
+                        target.load();
+                        target.dataset.loaded = 'true';
+                    }
+                }
+                target.play().catch(() => {});
+            } else {
+                target.pause();
+            }
+        });
+    }, { rootMargin: '300px 0px', threshold: 0.05 });
+
+    vids.forEach((video) => videoObserver.observe(video));
+}
 
   // Refresh Lucide icons after dynamically added markup.
   if(window.lucide) lucide.createIcons();
@@ -2789,7 +2828,23 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
 (function(){
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  const consoleEl=document.getElementById('heroVisualFrame');
- if(consoleEl&&!reduce){document.addEventListener('mousemove',e=>{const r=consoleEl.getBoundingClientRect();const x=(e.clientX-(r.left+r.width/2))/r.width;const y=(e.clientY-(r.top+r.height/2))/r.height;consoleEl.style.transform=`perspective(1000px) rotateY(${x*5}deg) rotateX(${y*-5}deg) translateY(-2px)`},{passive:true})}
+ if (consoleEl && !reduce) {
+    let mx = 0, my = 0, raf = 0;
+    document.addEventListener('mousemove', (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        if (!raf) {
+            raf = requestAnimationFrame(() => {
+                const r = consoleEl.getBoundingClientRect();
+                const x = (mx - (r.left + r.width / 2)) / r.width;
+                const y = (my - (r.top + r.height / 2)) / r.height;
+                consoleEl.style.transform =
+                    `perspective(1000px) rotateY(${x * 3}deg) rotateX(${y * -3}deg) translateY(-2px)`;
+                raf = 0;
+            });
+        }
+    }, { passive: true });
+}
  document.querySelectorAll('.skill-card-v3').forEach(card=>card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')}));
  const glitch=document.querySelector('.glitch-word');
  if(glitch&&!reduce){setInterval(()=>{glitch.dataset.text=glitch.textContent; if(Math.random()>.45){glitch.style.textShadow='-3px 0 rgba(255,51,71,.5),3px 0 rgba(255,255,255,.12)';setTimeout(()=>glitch.style.textShadow='',120)}},2500)}
