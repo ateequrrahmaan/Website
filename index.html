@@ -2385,7 +2385,7 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
 
     <section id="projects" class="projects-v3">
   <div class="container">
-    <div class="projects-head-v3"><div><span>05 / SELECTED WORK</span><h2>Things I<br><em>actually built.</em></h2></div><p>Not concept shots. Real product work across SaaS, supply chain, local discovery and collaboration.</p></div>
+    <div class="projects-head-v3"><div><span>05 / SELECTED WORK</span><h2>Things I<br><em>actually built.</em></h2></div><p>Not concept shots. Real product work across SaaS, mobile apps, supply chain, local discovery and collaboration.</p></div>
     <div class="project-showcase-v3">
       <article class="project-card project-card-v3 project-tandem" data-project-index="01">
         <div class="project-img"><span class="project-badge">01 / FEATURED</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/tandem-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Create_an_exactly_second_pr.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="tandem">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">01</span></div>
@@ -2402,6 +2402,10 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
       <article class="project-card project-card-v3 project-nearby" data-project-index="04">
         <div class="project-img"><span class="project-badge">04 / MOBILE</span><video muted loop playsinline preload="none" class="project-video" poster="assets/project-assets/nearby-poster.webp" aria-label="Project preview"><source data-src="assets/project-assets/Create_a_premium_startup_launc.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="ecommerce">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">04</span></div>
         <div class="project-info"><div class="project-label">LOCAL DISCOVERY / MAPS</div><h3>NEARBY</h3><p>A location-based platform for discovering nearby shops, products, offers and short-form reels.</p><div class="project-meta"><div class="project-meta-item"><strong>MAPS</strong><span>Google Maps</span></div><div class="project-meta-item"><strong>MEDIA</strong><span>Cloudinary</span></div><div class="project-meta-item"><strong>APP</strong><span>Flutter</span></div></div><div class="project-tags"><span class="project-tag">Flutter</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span><span class="project-tag">Cloudinary</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/drive/folders/1tNDciO1-hntypCOLoIkuSARRnY4yHszf" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
+      </article>
+      <article class="project-card project-card-v3 project-memoryos" data-project-index="05">
+        <div class="project-img"><span class="project-badge">05 / MOBILE</span><video muted loop playsinline preload="none" class="project-video" aria-label="MemoryOS mobile app preview"><source data-src="assets/project-assets/gemini_generated_video_b581ee1c.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="memoryos">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">05</span></div>
+        <div class="project-info"><div class="project-label">MOBILE / MEMORY / FLUTTER</div><h3>MEMORYOS</h3><p>A Flutter-based mobile application built with a clean, focused experience for capturing and working with personal memories.</p><div class="project-meta"><div class="project-meta-item"><strong>PLATFORM</strong><span>Mobile</span></div><div class="project-meta-item"><strong>FRAMEWORK</strong><span>Flutter</span></div><div class="project-meta-item"><strong>LANGUAGE</strong><span>Dart</span></div></div><div class="project-tags"><span class="project-tag">Flutter</span><span class="project-tag">Dart</span><span class="project-tag">Mobile</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan/memoryos" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/drive/folders/1vKrzfEGZYQ60lMN85R8T5FPvWJvYw01R?usp=drive_link" class="btn btn-primary" target="_blank" rel="noopener">View Demo</a></div></div>
       </article>
     </div>
     <div class="work-footer-v3"><span>MORE EXPERIMENTS / OPEN SOURCE / BUILDS</span><a href="https://github.com/ateequrrahmaan" target="_blank" rel="noopener">View GitHub <i data-lucide="arrow-up-right"></i></a></div>
@@ -2521,6 +2525,19 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
         });
 
         const projectData = {
+            memoryos: {
+                title: 'MEMORYOS',
+                subtitle: 'A Flutter mobile application.',
+                description: 'MemoryOS is a Flutter-based mobile application built with a clean, focused experience for working with personal memories.',
+                points: [
+                    'Cross-platform mobile application built with Flutter and Dart.',
+                    'Focused on a clean and responsive mobile user experience.'
+                ],
+                tags: ['Flutter', 'Dart', 'Mobile'],
+                image: 'assets/project-assets/gemini_generated_video_b581ee1c.mp4',
+                mediaType: 'video',
+                liveLink: 'https://drive.google.com/drive/folders/1vKrzfEGZYQ60lMN85R8T5FPvWJvYw01R?usp=drive_link'
+            },
             tandem: {
                 title: 'TANDEM',
                 subtitle: 'Get Things Done. Together.',
