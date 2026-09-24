@@ -2411,6 +2411,35 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
         <div class="project-img"><span class="project-badge">06 / SAAS</span><video muted loop playsinline preload="none" class="project-video" aria-label="CALC project preview"><source data-src="assets/project-assets/Create_a_premium_second_Saa.mp4" type="video/mp4"></video><div class="project-overlay"><button type="button" class="btn project-detail-btn" data-project="calc">Open case study <i data-lucide="arrow-up-right"></i></button></div><span class="project-number">06</span></div>
         <div class="project-info"><div class="project-label">CALCULATION / PROGRAMMABLE / SAAS</div><h3>CALC</h3><p>A programmable calculation platform for creating, managing, and sharing custom calculators.</p><div class="project-meta"><div class="project-meta-item"><strong>FRONTEND</strong><span>React + TypeScript</span></div><div class="project-meta-item"><strong>BACKEND</strong><span>FastAPI + Python</span></div><div class="project-meta-item"><strong>DATABASE</strong><span>PostgreSQL + Neon</span></div></div><div class="project-tags"><span class="project-tag">React</span><span class="project-tag">TypeScript</span><span class="project-tag">FastAPI</span><span class="project-tag">Python</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Neon</span></div><div class="project-links"><a href="https://github.com/ateequrrahmaan/calc" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a><a href="https://calc-beta-two.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a></div></div>
       </article>
+      <article class="project-card project-card-v3" data-project-index="07">
+        <div class="project-img">
+          <span class="project-badge">07 / SAAS</span>
+          <video muted loop playsinline preload="none" class="project-video" aria-label="Planstack project preview">
+            <source data-src="assets/project-assets/planstack.mp4" type="video/mp4">
+          </video>
+          <div class="project-overlay">
+            <button type="button" class="btn project-detail-btn" data-project="planstack">Open case study <i data-lucide="arrow-up-right"></i></button>
+          </div>
+          <span class="project-number">07</span>
+        </div>
+        <div class="project-info">
+          <div class="project-label">COLLABORATION / PLANNING / SAAS</div>
+          <h3>PLANSTACK</h3>
+          <p>A collaborative planning workspace that brings tasks, chat, calendars, expenses, polls, notes, announcements and reminders into one permission-controlled Plan.</p>
+          <div class="project-meta">
+            <div class="project-meta-item"><strong>FRONTEND</strong><span>Next.js + React</span></div>
+            <div class="project-meta-item"><strong>BACKEND</strong><span>NestJS + TypeScript</span></div>
+            <div class="project-meta-item"><strong>DATA</strong><span>PostgreSQL + Prisma</span></div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span><span class="project-tag">React</span><span class="project-tag">TypeScript</span><span class="project-tag">NestJS</span><span class="project-tag">Prisma</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Socket.IO</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ateequrrahmaan" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://planstack-frontend.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </article>
     </div>
     <div class="work-footer-v3"><span>MORE EXPERIMENTS / OPEN SOURCE / BUILDS</span><a href="https://github.com/ateequrrahmaan" target="_blank" rel="noopener">View GitHub <i data-lucide="arrow-up-right"></i></a></div>
   </div>
@@ -2529,6 +2558,25 @@ button,a,.btn-v3,.btn{touch-action:manipulation;-webkit-tap-highlight-color:tran
         });
 
         const projectData = {
+            planstack: {
+                title: 'PLANSTACK — COLLABORATIVE PLANNING WORKSPACE',
+                subtitle: 'Plan. Organize. Execute. Together.',
+                description: 'Planstack is a collaborative planning SaaS that brings tasks, checklists, group chat, calendar, expenses, payment splits, notes, polls, announcements, and reminders into one permission-controlled Plan workspace.',
+                points: [
+                    'Centralizes planning workflows inside a single collaborative Plan workspace.',
+                    'Includes tasks, checklists, group chat, calendar, expenses, payment splits, notes, polls, announcements, and reminders.',
+                    'Uses tool-level permissions with OWNER, ADMIN, and MEMBER roles.',
+                    'JWT authentication with refresh-token rotation and bcrypt password hashing.',
+                    'Real-time group communication powered by Socket.IO.',
+                    'Built with Next.js, React, TypeScript, Tailwind CSS, NestJS, Prisma, and PostgreSQL.'
+                ],
+                tags: ['Next.js', 'React', 'TypeScript', 'NestJS', 'Prisma', 'PostgreSQL', 'Socket.IO'],
+                image: 'assets/project-assets/planstack.mp4',
+                mediaType: 'video',
+                githubLink: 'https://github.com/ateequrrahmaan',
+                liveLink: 'https://planstack-frontend.vercel.app/'
+            },
+
             memoryos: {
                 title: 'MEMORYOS',
                 subtitle: 'Flutter mobile application.',
